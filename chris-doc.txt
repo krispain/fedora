@@ -1,0 +1,57 @@
+# Install from live gnome USB
+
+dnf -y install \ 
+     chromium \
+     firefox-esr-115-unwrapped \
+     mate-terminal \
+     neofetch \
+     htop \
+     ncdu \
+     git \
+     et \
+     parted \
+     zip \
+     unzip \
+     file \
+     wget \
+     traceroute \
+     android-tools \
+     eternal-terminal \
+     mosh \
+     fwupd \
+     nvd \
+     bintools \
+     rclone \
+     whois \
+     dig \
+     cron \
+     bc \
+     nmap \
+     nextcloud-client \
+     meld \
+     adoptopenjdk-icedtea-web \
+     openvpn \
+     glxinfo \
+     linphone \
+     mate.atril \
+     gparted \
+     lsof \
+     gimp \
+     shotwell \
+     mate-utils \
+     eom \
+     audacity \
+     sox \
+     ffmpeg \
+     ffmpeg-normalize \
+     vlc \
+     yt-dlp \
+     id3v2 \
+     cdrkit \
+     lame \
+     id3lib \
+     mp3gain \
+     flatpak-builder \
+     gnome-tweaks \
+     protonvpn-cli \
+     qbittorrent
