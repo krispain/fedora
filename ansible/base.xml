@@ -9,7 +9,25 @@
 
     - name: Install some packages
       dnf:
-        name: chromium,firefox-esr-115-unwrapped,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,eternal-terminal,mosh,fwupd,nvd,bintools,rclone,whois,dig,cron,bc,nmap,meld,adoptopenjdk-icedtea-web,openvpn,glxinfo,linphone,mate.atril,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,ffmpeg,ffmpeg-normalize,vlc,yt-dlp,id3v2,cdrkit,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
+        name: chromium,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,mosh,fwupd,nvd,rclone,whois,bc,nmap,meld,openvpn,glxinfo,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,vlc,yt-dlp,id3v2,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
+
+# need rpmfusion for these
+# ffmpeg,ffmpeg-normalize,cdrkit
+
+    - name: Install dnf plugins
+      dnf:
+        name: dnf-plugins-core
+
+    - name: Install brave repo
+      shell:
+        dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+    - name: Install Brave
+      dnf:
+        name: brave-browser
+
+
+
 
     - name: Start et service if not started
       service:
