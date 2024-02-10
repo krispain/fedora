@@ -11,21 +11,15 @@
       dnf:
         name: chromium,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,mosh,fwupd,rclone,whois,bc,nmap,meld,openvpn,glxinfo,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,vlc,yt-dlp,id3v2,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
 
-- name: "Add rpmfustion repo gpg keys"
-  ansible.builtin.rpm_key:
-    key: "{{ item }}"
-    state: present
-  with_items: 
-    - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
-    - "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
+    - name: Install RPM Fusion Free
+      dnf:
+        name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version.stdout }}.noarch.rpm"
+        state: present
 
-- name: install the rpmfusion repo packages
-  dnf:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_current }}.noarch.rpm
-    - http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_current }}.noarch.rpm
+    - name: Install RPM Fusion NonFree
+      dnf:
+        name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version.stdout }}.noarch.rpm"
+        state: present
 
     - name: Install rpmfusion sourced rpms
       dnf:
