@@ -45,9 +45,13 @@
       dnf:
         name: dnf-plugins-core
 
-    - name: Install brave repo
-      shell:
-        dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+    - name: Adding Brave browser repo
+      become: yes
+      ansible.builtin.command: dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+
+    - name: Importing Brave browser key
+      become: yes
+      ansible.builtin.command: rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
     - name: Install Brave
       dnf:
