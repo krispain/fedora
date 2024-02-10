@@ -15,6 +15,18 @@
       dnf:
         name: chromium,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,mosh,fwupd,rclone,whois,bc,nmap,meld,openvpn,glxinfo,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,vlc,yt-dlp,id3v2,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
 
+    - name: Importing RPM Fusion (free) key
+      become: yes
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020
+
+    - name: Importing RPM (non-free) key
+      become: yes
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
+
     - name: Install RPM Fusion Free
       dnf:
         name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ fedora_version.stdout }}.noarch.rpm"
