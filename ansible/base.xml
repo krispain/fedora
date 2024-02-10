@@ -39,7 +39,7 @@
 
     - name: Install rpmfusion sourced rpms
       dnf:
-        name: normalize,cdrkit
+        name: normalize
 
     - name: Install dnf plugins
       dnf:
