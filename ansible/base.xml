@@ -2,6 +2,10 @@
 - hosts: localhost
 
   tasks:
+    - name: Get Fedora Version
+      command: "rpm -E %fedora"
+      register: fedora_version
+
     - name: Update all pacakges
       dnf:
         name: "*"
