@@ -1,4 +1,14 @@
 # Install from live gnome USB
+Install Ansible:
+
+dnf -y install ansible-core
+
+git clone https://github.com/krispain/fedora.git
+
+cd fedora/ansible
+
+ansbile-playbook base.xml
+
 
 dnf -y install \ 
      chromium \

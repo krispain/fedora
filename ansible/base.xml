@@ -1,5 +1,5 @@
 ---
-- hosts: asus
+- hosts: localhost
 
   tasks:
     - name: Update all pacakges
