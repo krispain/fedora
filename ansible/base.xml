@@ -9,7 +9,7 @@
 
     - name: Install some packages
       dnf:
-        name: chromium,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,mosh,fwupd,nvd,rclone,whois,bc,nmap,meld,openvpn,glxinfo,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,vlc,yt-dlp,id3v2,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
+        name: chromium,mate-terminal,neofetch,htop,ncdu,git,et,parted,zip,unzip,file,wget,traceroute,android-tools,mosh,fwupd,rclone,whois,bc,nmap,meld,openvpn,glxinfo,gparted,lsof,gimp,shotwell,mate-utils,eom,audacity,sox,vlc,yt-dlp,id3v2,lame,id3lib,mp3gain,flatpak-builder,gnome-tweaks,protonvpn-cli,qbittorrent,gnome-flashback
 
 # need rpmfusion for these
 # ffmpeg,ffmpeg-normalize,cdrkit
