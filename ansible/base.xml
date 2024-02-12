@@ -14,47 +14,47 @@
     - name: Install some packages
       dnf:
         name: |
-          chromium
-          mate-terminal
-          neofetch
-          htop
-          ncdu
-          et
-          zip
-          unzip
-          file
-          wget
-          traceroute
-          android-tools
-          mosh
-          fwupd
-          rclone
-          whois
-          bc
-          nmap
-          meld
-          openvpn
-          glxinfo
-          gparted
-          lsof
-          gimp
-          shotwell
-          mate-utils
-          eom
-          audacity
-          sox
-          vlc
-          yt-dlp
-          id3v2
-          lame
-          id3lib
-          mp3gain
-          flatpak-builder
-          gnome-tweaks
-          protonvpn-cli
-          qbittorrent
-          gnome-flashback
-          bash-completion
-          normalize
+          chromium \
+          mate-terminal \
+          neofetch \
+          htop \
+          ncdu \
+          et \
+          zip \
+          unzip \
+          file \
+          wget \
+          traceroute \
+          android-tools \
+          mosh \
+          fwupd \
+          rclone \
+          whois \
+          bc \
+          nmap \
+          meld \
+          openvpn \
+          glxinfo \
+          gparted \
+          lsof \
+          gimp \
+          shotwell \
+          mate-utils \
+          eom \
+          audacity \
+          sox \
+          vlc \
+          yt-dlp \
+          id3v2 \
+          lame \
+          id3lib \
+          mp3gain \
+          flatpak-builder \
+          gnome-tweaks \
+          protonvpn-cli \
+          qbittorrent \
+          gnome-flashback \
+          bash-completion \
+          normalize \
           brave-browser
 
