@@ -56,7 +56,8 @@
           gnome-flashback,
           bash-completion,
           normalize,
-          brave-browser
+          brave-browsr,
+          nextcloud-client-nautilus
 
     - name: Install flatpak packages
       community.general.flatpak:
