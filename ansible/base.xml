@@ -52,7 +52,8 @@
           bash-completion,
           normalize,
           brave-browser,
-          nextcloud-client-nautilus
+          nextcloud-client-nautilus,
+          icedtea-web
 
     - name: Install flatpak packages
       community.general.flatpak:
