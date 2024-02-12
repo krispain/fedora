@@ -53,6 +53,10 @@
         group: root
         mode: 0644
 
+    - name: Install flatpak
+      dnf:
+        name: flatpak-builder
+
     - name: Add the flathub flatpak repository remote to the user installation
       community.general.flatpak_remote:
         name: flathub
