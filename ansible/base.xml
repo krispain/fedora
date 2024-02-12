@@ -10,6 +10,9 @@
       dnf:
         name: |
           chromium,
+          brave-browser,
+          firefox,
+          shotwell,
           mate-terminal,
           neofetch,
           htop,
@@ -33,7 +36,6 @@
           gparted,
           lsof,
           gimp,
-          shotwell,
           mate-utils,
           eom,
           audacity,
@@ -51,7 +53,6 @@
           gnome-flashback,
           bash-completion,
           normalize,
-          brave-browser,
           nextcloud-client-nautilus,
           icedtea-web
 
