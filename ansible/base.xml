@@ -51,3 +51,7 @@
           - com.slack.Slack
           - com.authy.Authy
           - com.bitwarden.desktop
+
+    - name: Install linphone appimage
+      command: "wget -O /usr/local/bin/linphone https://linphone.org/releases/linux/latest_app && chmod 755 /usr/local/bin/linphone"
+
