@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: Get Fedora Version
+      command: "rpm -E %fedora"
+      register: fedora_version
+
+    - name: Update all pacakges
+      dnf:
+        name: "*"
+        state: latest
+
+    - name: Upgrade all flatpaks
+      ansible.builtin.command: flatpak update --noninteractive
+      register: flatpak_update_output
+      changed_when: "'app/' in flatpak_update_output.stdout"

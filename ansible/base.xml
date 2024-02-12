@@ -6,11 +6,6 @@
       command: "rpm -E %fedora"
       register: fedora_version
 
-    - name: Update all pacakges
-      dnf:
-        name: "*"
-        state: latest
-
     - name: Install some packages
       dnf:
         name: |
