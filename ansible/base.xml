@@ -58,3 +58,9 @@
           normalize,
           brave-browser
 
+    - name: Install flatpak packages
+      community.general.flatpak:
+        name:
+          - com.slack.Slack
+          - com.authy.Authy
+          - com.bitwarden.desktop
