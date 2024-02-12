@@ -13,7 +13,7 @@
 
     - name: Install some packages
       dnf:
-	name: |
+        name: |
           chromium
           mate-terminal
           neofetch
