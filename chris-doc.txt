@@ -24,7 +24,7 @@ cd fedora/ansible
 ansbile-playbook initial-setup.xml
 
 # Updates
-ansbile-playbook base.xml
+ansbile-playbook updates.xml
 
 # install packages etc, will be run over and over
 ansbile-playbook base.xml
