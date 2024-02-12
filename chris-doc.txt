@@ -35,6 +35,7 @@ reboot
 systemctl set-default graphical.target
 systemctl enable gdm.service --now
 
+
 # Manual commands to run/setup
 authy
 bitwarden

@@ -53,5 +53,8 @@
           - com.bitwarden.desktop
 
     - name: Install linphone appimage
-      command: "wget -O /usr/local/bin/linphone https://linphone.org/releases/linux/latest_app && chmod 755 /usr/local/bin/linphone"
+      ansible.builtin.get_url:
+        url: https://linphone.org/releases/linux/latest_app
+        dest: /usr/local/bin/linphone"
+        mode: '0755'
 
