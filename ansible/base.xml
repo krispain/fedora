@@ -55,6 +55,6 @@
     - name: Install linphone appimage
       ansible.builtin.get_url:
         url: https://linphone.org/releases/linux/latest_app
-        dest: /usr/local/bin/linphone"
+        dest: /usr/local/bin/linphone
         mode: '0755'
 
