@@ -81,7 +81,7 @@
       ansible.posix.mount:
         src: 172.16.1.74:/nfs/WDNFS
         path: /mnt/WDNFS
-        opts: rw,sync,hard
+        opts: x-systemd.automount,x-systemd.idle-timeout=600
         boot: false
         state: mounted
         fstype: nfs
