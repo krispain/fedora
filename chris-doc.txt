@@ -61,15 +61,9 @@ Replace
 
 # Add persistent gnome-flashback shortcuts
 
-Add to Panel -> Custom Application Launcher
-Name:		Brave
-Command:	/run/current-system/sw/bin/brave
-Icon:		/run/current-system/sw/share/icons/hicolor/256x256/apps/brave-browser.png 
-
-Add to Panel -> Custom Application Launcher
-Name:		Mate Terminal
-Command:	/run/current-system/sw/bin/mate-terminal
-Icon:		/run/current-system/sw/share/icons/hicolor/48x48/apps/xterm-color_48x48.xpm 
+Drag/drop:
+Brave
+Mate Terminal
 
 Add to Panel -> System Indicators
 Add to Panel -> System Monitor
@@ -102,8 +96,8 @@ ssh-copy-id housing.krispain.com # Zurich
 # as root on housing do:
 tail -n 1 /home/cpayne/.ssh/authorized_keys >> /root/.ssh/authorized_keys
 
-Add to github account :-) 
-clone
+Add ssh key to github account via web interface
+
 mkdir ~/github && cd ~/github
 git clone git@github.com:krispain/nixos.git
 
@@ -122,74 +116,6 @@ wg-quick up <interface>.conf
 
 
 
-
-
-# Note about undoing 
-# https://superuser.com/questions/1604694/how-to-update-every-package-on-nixos
-
-nixos-rebuild switch --upgrade
-
-
-# To back out of full update use:
-nix-channel --rollback
-nixos-rebuild switch
-
-# Confirm latest channel:
-# https://nixos.org/manual/nixos/stable/#sec-upgrading
-
-# Update that channel
-nix-channel --update
-
-# the run usual update
-nixos-rebuild switch
-
-
-# to list gernarions available:
-nix-env --list-generations --profile /nix/var/nix/profiles/system
-
-# To set a working one default, once you boot into it successfully:
-/run/current-system/bin/switch-to-configuration boot
-
-
-
-# package searching:
-
-$ nix repl
-Welcome to Nix 2.13.5. Type :? for help.
-nix-repl> :load <nixpkgs>
-Added 19212 variables.
-
-nix-repl> 
-
-# Clean up unused stuff
-
-nix-collect-garbage --delete-older-than 7d --dry-run 
-# if sane....
-nix-collect-garbage --delete-older-than 7d
-
-# https://nixos.wiki/wiki/Storage_optimization
-# https://specific.solutions.limited/blog/recovering-diskspace-in-nixos
-
-nix-channel --update
-rm /nix/var/nix/gcroots/auto/*
-nix-collect-garbage --delete-older-than 7d
-# reboot and re clean for files that were held
-nix-collect-garbage --delete-older-than 7d
-
-
-# this takes time to hardlink filess
-nix-store --optimize
-
-
-
-
-# see what has changed between versions:
-
-nvd diff /nix/var/nix/profiles/system-{134,135}-link
-
-For just the most recent changes aka the last update:
-
-nvd diff $(ls -trd /nix/var/nix/profiles/*-link|tail -n 2)
 
 
 
