@@ -7,12 +7,12 @@
         name: "*"
         state: latest
       register: result
+    - name: Show output
+      when: result|succeeded
+      debug: msg="{{ result.results }}"
 
     - name: Upgrade all flatpaks
       ansible.builtin.command: 
         flatpak update --noninteractive
       register: result
 
-    - name: Show output
-      when: result|succeeded
-      debug: msg="{{ result.results }}"
