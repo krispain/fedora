@@ -6,8 +6,15 @@
       dnf:
         name: "*"
         state: latest
+      register:
+        result
 
     - name: Upgrade all flatpaks
-      ansible.builtin.command: flatpak update --noninteractive
-      register: flatpak_update_output
-      changed_when: "'app/' in flatpak_update_output.stdout"
+      ansible.builtin.command: 
+        flatpak update --noninteractive
+      register: 
+        result
+
+    - name: Show output
+      when: result|succeeded
+      debug: msg="{{ result.results }}"
