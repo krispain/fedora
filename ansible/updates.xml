@@ -7,7 +7,7 @@
         name: "*"
         state: latest
       register: result
-    - name: Show output
+    - name: Show updated packages output
       when: result is changed
       debug: msg="{{ result.results }}"
 
@@ -17,5 +17,5 @@
       register: result
     - name: Show output
       when: result is changed
-      debug: msg="{{ result.results }}"
+      debug: msg="{{ result.stdout_lines }}"
 
