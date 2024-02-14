@@ -53,6 +53,22 @@
         group: root
         mode: 0644
 
+    - name: add aliases script
+      copy:
+        src: aliases.sh
+        dest: /etc/profile.d/aliases.sh
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: add environment script
+      copy:
+        src: environment.sh
+        dest: /etc/profile.d/environment.sh
+        owner: root
+        group: root
+        mode: 0644
+
     - name: Install /etc/hosts file
       copy:
         src: hosts

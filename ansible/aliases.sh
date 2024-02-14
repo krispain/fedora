@@ -1,0 +1,8 @@
+alias -- console='javaws -J-Djava.security.properties=/home/cpayne/.config/icedtea-web/disabled_tls.properties'
+alias -- gs='git status'
+alias -- l='ls -alh'
+alias -- ll='ls -l'
+alias -- ls='ls --color=tty'
+alias -- m='ssh cpayne.nine.ch'
+alias -- mo='mosh --no-init cpayne.nine.ch'
+alias -- myip='dig +short myip.opendns.com @resolver1.opendns.com'
