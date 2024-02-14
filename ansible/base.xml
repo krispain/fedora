@@ -54,6 +54,8 @@
           - com.slack.Slack
           - com.authy.Authy
           - com.bitwarden.desktop
+          - org.signal.Signal
+          - org.telegram.desktop
 
     - name: Install linphone appimage
       ansible.builtin.get_url:
