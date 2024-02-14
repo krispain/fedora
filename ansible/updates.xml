@@ -15,6 +15,7 @@
       ansible.builtin.command: 
         flatpak update --noninteractive
       register: result
+      changed_when: "'Nothing to do' not in result.stdout"
     - name: Show output
       when: result is changed
       debug: msg="{{ result.stdout_lines }}"
