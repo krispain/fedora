@@ -20,6 +20,8 @@
           ncdu,
           et,
           android-tools,
+          tigervnc,
+          docker-compose,
           mosh,
           rclone,
           nmap,
