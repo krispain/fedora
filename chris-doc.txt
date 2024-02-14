@@ -33,7 +33,7 @@ reboot
 
 
 systemctl set-default graphical.target
-systemctl enable gdm.service --now
+systemctl enable lightdm.service --now
 
 
 # Manual commands to run/setup

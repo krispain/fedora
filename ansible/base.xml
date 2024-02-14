@@ -42,6 +42,7 @@
           protonvpn-cli,
           qbittorrent,
           gnome-flashback,
+          lightdm,
           normalize,
           nextcloud-client-nautilus,
           icedtea-web
