@@ -77,6 +77,15 @@
         group: root
         mode: 0644
 
+    - name: Mount home NFS volumes with noauto according to boot option
+      ansible.posix.mount:
+        src: 172.16.1.74:/nfs/WDNFS
+        path: /mnt/WDNFS
+        opts: rw,sync,hard
+        boot: false
+        state: mounted
+        fstype: nfs
+
     - name: Install flatpak
       dnf:
         name: flatpak-builder
