@@ -6,14 +6,12 @@
       dnf:
         name: "*"
         state: latest
-      register:
-        result
+      register: result
 
     - name: Upgrade all flatpaks
       ansible.builtin.command: 
         flatpak update --noninteractive
-      register: 
-        result
+      register: result
 
     - name: Show output
       when: result|succeeded
