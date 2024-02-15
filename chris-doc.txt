@@ -55,8 +55,8 @@ telegram
 
 Chris Payne -> Settings -> Keyboard -> Keyboard Shortcuts -> View and Customize Shortcus -> Custom Shortcuts -> Add Shortcut
 Name:		Mate Screenshot
-Command:	/run/current-system/sw/bin/mate-screenshot -a
-Shortcut: 	Ctrl-Shift-Fn-Printscreen
+Command:	/usr/bin/mate-screenshot -w
+Shortcut: 	Fn-Printscreen
 Replace
 
 # Add persistent gnome-flashback shortcuts
@@ -65,7 +65,6 @@ Drag/drop:
 Brave
 Mate Terminal
 
-Add to Panel -> System Indicators
 Add to Panel -> System Monitor
 	-> configure 
 
