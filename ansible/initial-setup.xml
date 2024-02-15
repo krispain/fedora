@@ -33,6 +33,11 @@
         name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ fedora_version.stdout }}.noarch.rpm"
         state: present
 
+    - name: Install protonvpn repo
+      dnf:
+        name: "https://repo.protonvpn.com/fedora-{{ fedora_version.stdout }}-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm
+        state: present
+
     - name: Install dnf plugins
       dnf:
         name: dnf-plugins-core
