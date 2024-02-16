@@ -168,3 +168,16 @@ Then configure Firefox to use that to open jnlp files
 
 
 
+2024/02/16
+
+Setting up wiregard VPN, use script from work
+
+conf file needs to be in 
+/home/cpayne/Download/WireGuard.conf 
+then run
+sh nm_config_wg_nine.sh
+
+
+It then shows in Network Manager and connects fine
+
+
