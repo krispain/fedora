@@ -50,6 +50,8 @@
           lightdm,
           normalize,
           nextcloud-client-nautilus,
+          iwlwifi-mvm-firmware,
+          iwlwifi-dvm-firmware,
           icedtea-web
 
     - name: Install flatpak packages
