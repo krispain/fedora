@@ -29,21 +29,22 @@ ansbile-playbook updates.xml
 # install packages etc, will be run over and over
 ansbile-playbook base.xml
 
+systemctl set-default graphical.target
+systemctl enable lightdm.service
+
 reboot
 
+Login - Select 'Gnome Flashback" session
 
-systemctl set-default graphical.target
-systemctl enable lightdm.service --now
+# Add persistent gnome-flashback shortcuts
 
+Drag/drop:
+Brave
+Mate Terminal
 
-# Manual commands to run/setup
-authy
-bitwarden
-protonvpn-cli login cpayne
-ssh-keygen -t ed25519
-nextcloud		https://nextcloud.skierswithoutboarders.com
-signal
-telegram
+Add to Panel -> System Monitor
+	-> configure 
+
 
 # Accessories -> Tweaks -> Windows -> Focus on Hover
 # Accessories -> Tweaks -> Window Titlebars -> Double Click -> "Maximize Vertically"
@@ -59,15 +60,29 @@ Command:	/usr/bin/mate-screenshot -w
 Shortcut: 	Fn-Printscreen
 Replace
 
-# Add persistent gnome-flashback shortcuts
+Add seconds to clock
+Add locations
+	Vernon
+	Zurich
+	Dublin
+	Ithaca
+	Saskatoon
 
-Drag/drop:
-Brave
-Mate Terminal
+# Manual commands to run/setup
+authy
+bitwarden
+protonvpn-cli login cpayne
+ssh-keygen -t ed25519
+nextcloud		https://nextcloud.skierswithoutboarders.com
+signal
+telegram
 
-Add to Panel -> System Monitor
-	-> configure 
-
+# Setup Brave
+# Sync from another device
+# Change search to startpage.com
+# Start where you left off
+# Wide address bar
+# always show full url
 
 # Some useful links to install stuff
 # Bitwarden brave addon
@@ -98,16 +113,10 @@ tail -n 1 /home/cpayne/.ssh/authorized_keys >> /root/.ssh/authorized_keys
 Add ssh key to github account via web interface
 
 mkdir ~/github && cd ~/github
+git clone git@github.com:krispain/fedora.git
 git clone git@github.com:krispain/nixos.git
 
  
-# Setup Brave
-# Sync from another device
-# Change search to startpage.com
-# Start where you left off
-# Wide address bar
-# always show full url
-
 # for nine VPN, download config files from protondrive
 rename to be interface names
 connect using
