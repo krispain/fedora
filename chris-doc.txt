@@ -140,43 +140,6 @@ https://ubuntuforums.org/showthread.php?t=2486167&p=14158211#post14158211
 - (Click "Apply" again)
 
 
-2023/11/07
-
-To run the old java consoles, this is what is needed:
-
-Setup Firefox to connect to them by
-
-about:config
-
-security.tls.version.min	1
-
-
-Then do this so the javaws can connect:
-
-
-[cpayne@thinkpad-nixos:~]$ cat /home/cpayne/.config/icedtea-web/disabled_tls.properties
-jdk.tls.disabledAlgorithms=SSLv3
-jdk.jar.disabledAlgorithms=MD2
-
-[cpayne@thinkpad-nixos:~]$ javaws -J-Djava.security.properties=/home/cpayne/.config/icedtea-web/disabled_tls.properties ~/Downloads/jviewer.jnlp
-
-2023/11/14
-
-Setup script 
-
-[cpayne@thinkpad-nixos:~/github/nixos]$ cat ~/bin/javaws-nixos.sh 
-#!/bin/sh
-
-javaws -J-Djava.security.properties=/home/cpayne/.config/icedtea-web/disabled_tls.properties "${1}"
-
-[cpayne@thinkpad-nixos:~/github/nixos]$ 
-
-Then configure Firefox to use that to open jnlp files
-
-
-
-
-
 2024/02/16
 
 Setting up wiregard VPN, use script from work
@@ -188,5 +151,78 @@ sh nm_config_wg_nine.sh
 
 
 It then shows in Network Manager and connects fine
+
+
+2024/02/20
+
+RMM:
+Need to downgrade openvpn in order to connect, error:
+
+2024-02-20 07:03:08 OpenSSL: error:0A00018F:SSL routines::ee key too small:
+
+Get old RPM from :
+
+https://rpm.pbone.net/info_idpl_80034947_distro_fedora33_com_openvpn-2.4.11-1.fc33.x86_64.rpm.html
+
+wget ftp://ftp.pbone.net/mirror/archive.fedoraproject.org/fedora/linux/updates/33/Everything/x86_64/Packages/o/openvpn-2.4.11-1.fc33.x86_64.rpm 
+
+Install:
+
+dnf downgrade ./openvpn-2.4.11-1.fc33.x86_64.rpm 
+
+Version Lock:
+
+dnf install 'dnf-command(versionlock)'
+dnf versionlock openvpn
+
+
+[root@thinkpad-fedora:~/fedora/ansible ]$ dnf versionlock openvpn
+Last metadata expiration check: 2:05:56 ago on Tue 20 Feb 2024 06:46:59 AM PST.
+Adding versionlock on: openvpn-0:2.4.11-1.fc33.*
+[root@thinkpad-fedora:~/fedora/ansible ]$ 
+
+
+Manually add a couple aliases for root to connect
+
+
+2024/02/20
+
+To run the old java consoles, this is what is needed:
+
+Firefox needs a downgrade for old RMMs
+
+mkdir -p /home/cpayne/firefox-esr && cd /home/cpayne/firefox-esr
+wget -O firefox-esr.tar.bz2 "https://download.mozilla.org/?product=firefox-esr-latest-ssl&os=linux64&lang=en-US"
+bunzip firefox-esr.tar.bz2
+tar -xvf firefox-esr.tar
+cd /home/cpayne/bin
+ln -s /home/cpayne/firefox-esr/firefox/firefox 
+
+
+Setup Firefox to connect to them by
+
+about:config
+
+security.tls.version.min	1
+
+Edit:
+
+Using this:
+
+/usr/bin/javaws -J-Djava.security.debug=properties jviewer.jnlp
+
+determine this file needs to have a couple removed:
+
+/etc/crypto-policies/back-ends/java.config
+
+[root@thinkpad-fedora:~/fedora/ansible ]$ diff /etc/crypto-policies/back-ends/java.config /etc/crypto-policies/back-ends/java.config.orig
+2c2
+< jdk.tls.disabledAlgorithms=DH keySize < 2048, SSLv3, SSLv2, DHE_DSS, RSA_EXPORT, DHE_DSS_EXPORT, DHE_RSA_EXPORT, DH_DSS_EXPORT, DH_RSA_EXPORT, DH_anon, ECDH_anon, DH_RSA, DH_DSS, ECDH, 3DES_EDE_CBC, DES_CBC, RC4_40, RC4_128, DES40_CBC, RC2, HmacMD5
+---
+> jdk.tls.disabledAlgorithms=DH keySize < 2048, TLSv1.1, TLSv1, SSLv3, SSLv2, DHE_DSS, RSA_EXPORT, DHE_DSS_EXPORT, DHE_RSA_EXPORT, DH_DSS_EXPORT, DH_RSA_EXPORT, DH_anon, ECDH_anon, DH_RSA, DH_DSS, ECDH, 3DES_EDE_CBC, DES_CBC, RC4_40, RC4_128, DES40_CBC, RC2, HmacMD5
+[root@thinkpad-fedora:~/fedora/ansible ]$ 
+
+
+and now they just will run from the firefox download folder.
 
 
