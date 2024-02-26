@@ -226,3 +226,11 @@ determine this file needs to have a couple removed:
 and now they just will run from the firefox download folder.
 
 
+
+2024/02/26
+
+ssh access via cloudflare to house, package added, configure ssh client:
+echo "host coldstream.krispain.com
+	ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
+" >> /home/cpayne/.ssh/config
+
