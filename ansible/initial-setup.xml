@@ -39,6 +39,12 @@
         disable_gpg_check: true
         state: present
 
+    - name: Install cloudflared
+      dnf:
+        name: "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-x86_64.rpm"
+        disable_gpg_check: true
+        state: present
+
     - name: Install dnf plugins
       dnf:
         name: dnf-plugins-core
