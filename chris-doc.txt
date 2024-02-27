@@ -60,6 +60,10 @@ Command:	/usr/bin/mate-screenshot -w
 Shortcut: 	Fn-Printscreen
 Replace
 
+Chris Payne -> Settings -> Default Apps
+Photos -> Eye of MATE
+
+
 Add seconds to clock
 Add locations
 	Vernon
