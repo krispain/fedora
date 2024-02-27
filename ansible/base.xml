@@ -52,7 +52,9 @@
           nextcloud-client-nautilus,
           iwlwifi-mvm-firmware,
           iwlwifi-dvm-firmware,
-          icedtea-web
+          icedtea-web,
+          default-fonts,
+          default-fonts-core
 
     - name: Install flatpak packages
       community.general.flatpak:
