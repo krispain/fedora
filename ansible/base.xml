@@ -16,6 +16,7 @@
           gnome-calculator,
           gvfs-mtp,
           ifuse,
+          libimobiledevice-utils,
           mate-terminal,
           neofetch,
           htop,
