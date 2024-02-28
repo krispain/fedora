@@ -17,6 +17,7 @@
           gvfs-mtp,
           ifuse,
           libimobiledevice-utils,
+          usbmuxd,
           mate-terminal,
           neofetch,
           htop,
