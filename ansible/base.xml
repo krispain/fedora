@@ -48,6 +48,7 @@
           mp3gain,
           alsa-sof-firmware,
           pavucontrol,
+          pulseaudio-utils,
           gnome-tweaks,
           protonvpn,
           qbittorrent,
