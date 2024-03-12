@@ -49,6 +49,7 @@
           alsa-sof-firmware,
           pavucontrol,
           pulseaudio-utils,
+          intel-audio-firmware,
           gnome-tweaks,
           protonvpn,
           qbittorrent,
