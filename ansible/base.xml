@@ -46,6 +46,8 @@
           lame,
           id3lib,
           mp3gain,
+          alsa-sof-firmware,
+          pavucontrol,
           gnome-tweaks,
           protonvpn,
           qbittorrent,
