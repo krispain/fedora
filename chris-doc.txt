@@ -242,6 +242,7 @@ echo "host coldstream.krispain.com
 
 2024/03/12
 
+https://discussion.fedoraproject.org/t/fedora-stopped-detecting-internal-laptop-microphone/73839
 To get internal microphone working on thinkpad, had to swap:
 
 dnf swap wireplumber pipewire-media-session
