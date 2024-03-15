@@ -246,3 +246,8 @@ https://discussion.fedoraproject.org/t/fedora-stopped-detecting-internal-laptop-
 To get internal microphone working on thinkpad, had to swap:
 
 dnf swap wireplumber pipewire-media-session
+
+2024/03/15
+Had to switch back
+dnf swap pipewire-media-session wireplumber 
+
