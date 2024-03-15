@@ -81,4 +81,5 @@
     - name: Install Protonmail Desktop App
       dnf:
         name: "https://proton.me/download/mail/linux/ProtonMail-desktop-beta.rpm"
+        disable_gpg_check: true
         state: present
