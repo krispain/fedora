@@ -61,7 +61,10 @@
           iwlwifi-dvm-firmware,
           icedtea-web,
           default-fonts,
-          default-fonts-core
+          default-fonts-core,
+          fzf,
+          bat,
+          fd-find
 
     - name: Install flatpak packages
       community.general.flatpak:
