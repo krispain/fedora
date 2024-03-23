@@ -71,7 +71,6 @@
       community.general.flatpak:
         name:
           - com.slack.Slack
-          - com.authy.Authy
           - com.bitwarden.desktop
           - org.signal.Signal
           - org.telegram.desktop
