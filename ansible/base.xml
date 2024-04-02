@@ -65,7 +65,9 @@
           default-fonts-core,
           fzf,
           bat,
-          fd-find
+          fd-find,
+          vim-X11,
+          vim-syntastic-ansible.noarch
 
     - name: Install flatpak packages
       community.general.flatpak:
