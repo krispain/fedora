@@ -72,7 +72,6 @@
       community.general.flatpak:
         name:
           - com.bitwarden.desktop
-          - org.signal.Signal
           - org.telegram.desktop
           - com.brave.Browser
 
