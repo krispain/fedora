@@ -67,7 +67,8 @@
           bat,
           fd-find,
           vim-X11,
-          vim-syntastic-ansible.noarch
+          vim-syntastic-ansible.noarch,
+          remove-retired-packages
 
     - name: Install flatpak packages
       community.general.flatpak:
