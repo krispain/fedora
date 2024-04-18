@@ -70,7 +70,11 @@
     - name: Remove some packages
       dnf:
         name: |
-          thunderbird
+          thunderbird,
+          gnome-terminal,
+          xawtv,
+          mpv,
+          xfburn
         state: absent
 
     - name: Install flatpak packages
