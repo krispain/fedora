@@ -51,7 +51,7 @@
           intel-audio-firmware,
           protonvpn,
           qbittorrent,
-          '@Cinnamon',
+          @Cinnamon,
           lightdm,
           normalize,
           nextcloud-client-nautilus,
