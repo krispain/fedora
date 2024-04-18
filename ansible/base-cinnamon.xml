@@ -67,6 +67,12 @@
           vim-syntastic-ansible.noarch,
           remove-retired-packages
 
+    - name: Remove some packages
+      dnf:
+        name: |
+          thunderbird
+        state: absent
+
     - name: Install flatpak packages
       community.general.flatpak:
         name:
