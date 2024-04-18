@@ -6,7 +6,6 @@
       dnf:
         name: |
           chromium,
-          brave-browser,
           firefox,
           shotwell,
           libreoffice,
@@ -52,8 +51,7 @@
           pulseaudio-utils,
           intel-audio-firmware,
           gnome-tweaks,
-          protonvpn-cli,
-          python3-pip,
+          protonvpn,
           qbittorrent,
           gnome-flashback,
           lightdm,
@@ -68,16 +66,14 @@
           bat,
           fd-find,
           vim-X11,
-          vim-syntastic-ansible.noarch,
-          remove-retired-packages
+          vim-syntastic-ansible.noarch
 
     - name: Install flatpak packages
       community.general.flatpak:
         name:
-          - com.slack.Slack
           - com.bitwarden.desktop
-          - org.signal.Signal
           - org.telegram.desktop
+          - com.brave.Browser
 
     - name: Install linphone appimage
       ansible.builtin.get_url:
@@ -85,8 +81,8 @@
         dest: /usr/local/bin/linphone
         mode: '0755'
 
-    - name: Install Protonmail Desktop App
-      dnf:
-        name: "https://proton.me/download/mail/linux/ProtonMail-desktop-beta.rpm"
-        disable_gpg_check: true
-        state: present
+#     - name: Install Protonmail Desktop App
+#       dnf:
+#         name: "https://proton.me/download/mail/linux/ProtonMail-desktop-beta.rpm"
+#         disable_gpg_check: true
+#         state: present
