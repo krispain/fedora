@@ -76,7 +76,10 @@
           mpv,
           xfburn,
           pidgin,
-          transmission
+          transmission,
+          hexchat,
+          redshift,
+          malcontent-control
         state: absent
 
     - name: Install flatpak packages
