@@ -74,7 +74,9 @@
           gnome-terminal,
           xawtv,
           mpv,
-          xfburn
+          xfburn,
+          pidgin,
+          transmission
         state: absent
 
     - name: Install flatpak packages
