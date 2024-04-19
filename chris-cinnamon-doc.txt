@@ -45,17 +45,13 @@ Startup Applications
 Disable 
 	dnfdragora-updater
 	
-Rwemove some stuff
+Remove some stuff
 
 # Add persistent shortcuts
 
 Drag/drop:
 Brave
 Mate Terminal
-
-Configure date
-	add seconds and date
-
 
 
 Applets -> Download -> System Monitor
@@ -72,6 +68,8 @@ Add locations
 	Ithaca
 	Saskatoon
 	Vernon
+
+Power Manager -> Configure -> Display -> Show Percentage and Time Remaining
 
 # Settings -> Windows -> Titlebar ->  Action on titlebar Double Click -> "Maximize Vertically"
 # Settings -> Windows -> Behaviou -> Window Focus Mode -> Sloppy
@@ -91,6 +89,7 @@ Source Code -> Other Application -> GVim
 Plain Text -> GVim
 Terminal -> MATE Terminal
 
+Settings -> Themes -> Adjust to your mood :-) 
 
 # Manual commands to run/setup
 authy
