@@ -80,7 +80,8 @@
           transmission,
           hexchat,
           redshift,
-          malcontent-control
+          malcontent-control,
+          rygel
         state: absent
 
     - name: Install flatpak packages
