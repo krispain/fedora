@@ -27,6 +27,7 @@
           tigervnc,
           docker-compose,
           virt-manager,
+          openssh-askpass,
           mosh,
           rclone,
           nmap,
