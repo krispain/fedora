@@ -66,7 +66,8 @@
           fd-find,
           vim-X11,
           vim-syntastic-ansible.noarch,
-          remove-retired-packages
+          remove-retired-packages,
+          smem
 
     - name: Remove some packages
       dnf:
