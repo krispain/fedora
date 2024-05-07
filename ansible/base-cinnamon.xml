@@ -67,7 +67,8 @@
           vim-X11,
           vim-syntastic-ansible.noarch,
           remove-retired-packages,
-          smem
+          smem,
+          x2goclient
 
     - name: Remove some packages
       dnf:
