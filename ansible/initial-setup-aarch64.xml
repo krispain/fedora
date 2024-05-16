@@ -6,7 +6,7 @@
       command: "rpm -E %fedora"
       register: fedora_version
 
-    - name: Update all pacakges
+    - name: Update all packages
       dnf:
         name: "*"
         state: latest
