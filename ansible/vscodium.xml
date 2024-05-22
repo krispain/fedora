@@ -20,8 +20,9 @@
         group: root
         mode: 0644
 
-    - name: Install vscodium package
+    - name: Install vscodium package and dependencies
       dnf:
         name: |
-          codium
+          codium,
+          puppet
 
