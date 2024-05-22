@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: Get Fedora Version
+      command: "rpm -E %fedora"
+      register: fedora_version
+
+    - name: Import vscodium.com GPG key
+      become: yes
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+
+    - name: Install vscodium repo file
+      copy:
+        src: vscodium.repo
+        dest: /etc/yum.repos.d/vscodium.repo
+        owner: root
+        group: root
+        mode: 0644
+
+    - name: Install vscodium package
+      dnf:
+        name: |
+          codium
+
