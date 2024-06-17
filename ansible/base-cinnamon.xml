@@ -36,6 +36,7 @@
           glxinfo,
           gparted,
           gimp,
+          flameshot,
           mate-utils,
           eom,
           audacity,
