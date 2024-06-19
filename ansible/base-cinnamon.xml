@@ -71,6 +71,7 @@
           vim-syntastic-ansible.noarch,
           remove-retired-packages,
           smem,
+          glmark2,
           x2goclient
 
     - name: Remove some packages
