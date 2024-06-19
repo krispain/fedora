@@ -53,7 +53,7 @@
           pavucontrol,
           pulseaudio-utils,
           intel-audio-firmware,
-          protonvpn,
+          proton-vpn-gnome-desktop,
           qbittorrent,
           @Cinnamon,
           lightdm,
