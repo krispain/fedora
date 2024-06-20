@@ -54,6 +54,7 @@
           pulseaudio-utils,
           intel-audio-firmware,
           proton-vpn-gnome-desktop,
+          wireguard-tools,
           qbittorrent,
           @Cinnamon,
           lightdm,
