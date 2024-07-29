@@ -45,10 +45,3 @@
         name: "https://proton.me/download/mail/linux/ProtonMail-desktop-beta.rpm"
         disable_gpg_check: true
         state: present
-
-    - name: Update Slack Desktop App
-      dnf:
-        name: "https://slack.com/downloads/instructions/linux?ddl=1&build=rpm"
-        disable_gpg_check: true
-        state: present
-
