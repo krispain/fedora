@@ -94,7 +94,6 @@
     - name: Install flatpak packages
       community.general.flatpak:
         name:
-          - com.slack.Slack
           - com.bitwarden.desktop
           - org.signal.Signal
           - org.telegram.desktop
@@ -104,6 +103,12 @@
         url: https://linphone.org/releases/linux/latest_app
         dest: /usr/local/bin/linphone
         mode: '0755'
+
+    - name: Install Slack Desktop App
+      dnf:
+        name: "https://slack.com/downloads/instructions/linux?ddl=1&build=rpm"
+        disable_gpg_check: true
+        state: present
 
     - name: Install Protonmail Desktop App
       dnf:
