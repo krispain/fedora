@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: Get Fedora Version
+      command: "rpm -E %fedora"
+      register: fedora_version
+
+    - name: Install podman package and dependencies
+      dnf:
+        name: |
+          podman,
+          python3-selenium.noarch
+
