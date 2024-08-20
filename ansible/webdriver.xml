@@ -10,5 +10,6 @@
       dnf:
         name: |
           podman,
-          python3-selenium.noarch
+          python3-selenium.noarch,
+          python3-virtualenv.noarch
 
