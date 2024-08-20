@@ -11,5 +11,6 @@
         name: |
           podman,
           python3-selenium.noarch,
-          python3-virtualenv.noarch
+          python3-virtualenv.noarch,
+          python3-pip.noarch
 
