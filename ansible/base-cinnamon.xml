@@ -18,6 +18,7 @@
           libimobiledevice-utils,
           usbmuxd,
           mate-terminal,
+          ptyxis,
           fastfetch,
           nethogs,
           htop,
