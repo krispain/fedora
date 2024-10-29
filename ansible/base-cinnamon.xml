@@ -18,7 +18,6 @@
           libimobiledevice-utils,
           usbmuxd,
           mate-terminal,
-          neofetch,
           fastfetch,
           nethogs,
           htop,
@@ -79,6 +78,7 @@
       dnf:
         name: |
           thunderbird,
+          thunderbird-librnp-rnp,
           gnome-terminal,
           xawtv,
           mpv,
@@ -86,9 +86,7 @@
           pidgin,
           transmission,
           hexchat,
-          redshift,
-          malcontent-control,
-          rygel
+          malcontent-control
         state: absent
 
     - name: Install flatpak packages
