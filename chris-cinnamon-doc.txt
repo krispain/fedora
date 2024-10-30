@@ -21,13 +21,13 @@ git clone https://github.com/krispain/fedora.git
 cd fedora/ansible
 
 # setup repos etc, one time stuff:
-ansbile-playbook initial-setup.xml
+ansible-playbook initial-setup.xml
 
 # Updates
-ansbile-playbook updates.xml
+ansible-playbook updates.xml
 
 # install packages etc, will be run over and over
-ansbile-playbook base.xml
+ansible-playbook base.xml
 
 systemctl set-default graphical.target
 
