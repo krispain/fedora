@@ -20,7 +20,6 @@
           libimobiledevice-utils,
           usbmuxd,
           mate-terminal,
-          neofetch,
           htop,
           ncdu,
           et,
