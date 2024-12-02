@@ -14,7 +14,7 @@ Add user, Administrator (defaul)
 
 Install Ansible core and git
 
-dnf -y install ansible git
+dnf -y install ansible git vim
 
 git clone https://github.com/krispain/fedora.git
 
@@ -27,7 +27,7 @@ ansible-playbook initial-setup.xml
 ansible-playbook updates.xml
 
 # install packages etc, will be run over and over
-ansible-playbook base.xml
+ansible-playbook base-cinnamon.xml
 
 systemctl set-default graphical.target
 
@@ -71,9 +71,14 @@ Startup Applications
 Disable 
 	dnfdragora-updater
 	
+Add custom startup to disable bluetooth
+Disable Bluetooth
+/usr/bin/rfkill block bluetooth
+
+
 Remove some stuff
 
-# Add persistent shortcuts
+# Add Panel Launchers
 
 Drag/drop:
 Brave
@@ -94,6 +99,8 @@ Add locations
 	Ithaca
 	Saskatoon
 	Vernon
+
+Set format to:  %H:%M:%S (%a)
 
 # Manual commands to run/setup
 authy
