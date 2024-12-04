@@ -110,6 +110,8 @@ ssh-keygen -t ed25519
 nextcloud		https://nextcloud.skierswithoutboarders.com
 signal
 telegram
+slack
+
 
 # Setup Brave
 # Sync from another device
