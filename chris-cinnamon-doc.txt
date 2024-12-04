@@ -198,27 +198,19 @@ Need to downgrade openvpn in order to connect, error:
 
 Get old RPM from :
 
-https://rpm.pbone.net/info_idpl_80034947_distro_fedora33_com_openvpn-2.4.11-1.fc33.x86_64.rpm.html
+rpm.pbone.net
 
-wget ftp://ftp.pbone.net/mirror/archive.fedoraproject.org/fedora/linux/updates/33/Everything/x86_64/Packages/o/openvpn-2.4.11-1.fc33.x86_64.rpm 
+openssl1.1-1.1.1q-5.fc39.x86_64.rpm
+openvpn-2.4.11-1.fc33.x86_64.rpm
 
 Install:
 
-dnf downgrade ./openvpn-2.4.11-1.fc33.x86_64.rpm 
+dnf install ./openvpn-2.4.11-1.fc33.x86_64.rpm ./openssl1.1-1.1.1q-5.fc39.x86_64.rpm
 
 Version Lock:
 
-dnf install 'dnf-command(versionlock)'
-dnf versionlock openvpn
-
-
-[root@thinkpad-fedora:~/fedora/ansible ]$ dnf versionlock openvpn
-Last metadata expiration check: 2:05:56 ago on Tue 20 Feb 2024 06:46:59 AM PST.
-Adding versionlock on: openvpn-0:2.4.11-1.fc33.*
-[root@thinkpad-fedora:~/fedora/ansible ]$ 
-
-
-Manually add a couple aliases for root to connect
+dnf versionlock add openvpn openssl1.1
+dnf versionlock list
 
 
 2024/02/20
