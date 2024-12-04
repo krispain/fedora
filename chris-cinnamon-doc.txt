@@ -288,3 +288,15 @@ dnf swap wireplumber pipewire-media-session
 Had to switch back
 dnf swap pipewire-media-session wireplumber 
 
+
+
+2024/12/03
+
+To get new laptop built in microphone working I had to fiddle with things:
+
+dnf swap wireplumber pipewire-media-session
+dnf swap pipewire-media-session wireplumber
+
+So no net change, but it works after, which is odd......
+
+
