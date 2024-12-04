@@ -300,3 +300,22 @@ dnf swap pipewire-media-session wireplumber
 So no net change, but it works after, which is odd......
 
 
+2024/12/04
+
+Ancient java consoles required this change:
+
+[root@tp-gen12:/etc/java/java-1.8.0-openjdk/java-1.8.0-openjdk-1.8.0.432.b06-3.fc41.x86_64/lib/security ]$ diff -u java.security.orig java.security
+--- java.security.orig        2024-12-04 12:52:24.113345656 -0800
++++ java.security     2024-12-04 12:59:25.527906828 -0800
+@@ -696,7 +696,7 @@
+ # See "jdk.certpath.disabledAlgorithms" for syntax descriptions.
+ #
+ jdk.jar.disabledAlgorithms=MD2, MD5, RSA keySize < 1024, \
+-      DSA keySize < 1024, SHA1 denyAfter 2019-01-01, \
++      DSA keySize < 1024, \
+       include jdk.disabled.namedCurves
+
+# then this just works (tm)
+export JAVA_HOME="/usr/lib/jvm/jre-1.8.0"
+/usr/bin/javaws "${1}"
+
