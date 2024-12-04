@@ -254,6 +254,19 @@ determine this file needs to have a couple removed:
 and now they just will run from the firefox download folder.
 
 
+2024/12/03
+
+Consoles, install java 1.8:
+
+dnf install java-1.8.0-openjdk.x86_64
+
+
+Then the script just works (tm):
+
+/home/cpayne/bin/javaws-fedora.sh jviewer.jnlp 
+
+
+
 
 2024/02/26
 
