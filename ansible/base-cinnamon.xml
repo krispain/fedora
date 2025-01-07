@@ -73,7 +73,8 @@
           remove-retired-packages,
           smem,
           glmark2,
-          x2goclient
+          x2goclient,
+          mediawriter
 
     - name: Remove some packages
       dnf:
