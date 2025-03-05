@@ -5,5 +5,7 @@
     - name: Install v4l2 package and dependencies
       dnf:
         name: |
-          v4l-utils v4l2loopback kmod-v4l2loopback
+	   v4l-utils,
+	   v4l2loopback,
+	   kmod-v4l2loopback
 
