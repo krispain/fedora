@@ -75,7 +75,8 @@
           smem,
           glmark2,
           x2goclient,
-          mediawriter
+          mediawriter,
+          goverlay
 
     - name: Remove some packages
       dnf:
