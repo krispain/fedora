@@ -35,7 +35,7 @@
 
     - name: Install protonvpn repo
       dnf:
-        name: "https://repo.protonvpn.com/fedora-{{ fedora_version.stdout }}-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
+        name: "https://repo.protonvpn.com/fedora-{{ fedora_version.stdout }}-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
         disable_gpg_check: true
         state: present
 
