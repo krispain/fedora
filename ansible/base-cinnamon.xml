@@ -37,6 +37,7 @@
           openvpn,
           glxinfo,
           gparted,
+          fwupd-efi,
           gimp,
           flameshot,
           mate-utils,
