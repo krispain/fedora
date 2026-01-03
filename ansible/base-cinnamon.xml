@@ -77,7 +77,9 @@
           glmark2,
           x2goclient,
           mediawriter,
-          goverlay
+          goverlay,
+          nix-core,
+          nix-legacy
 
     - name: Remove some packages
       dnf:
