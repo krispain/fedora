@@ -81,7 +81,8 @@
           mediawriter,
           goverlay,
           nix-core,
-          nix-legacy
+          nix-legacy,
+          nodejs24-npm
 
     - name: Remove some packages
       dnf:
