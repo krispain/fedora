@@ -82,7 +82,8 @@
           goverlay,
           nix-core,
           nix-legacy,
-          nodejs24-npm
+          nodejs24-npm,
+          hugo
 
     - name: Remove some packages
       dnf:
