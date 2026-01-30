@@ -83,7 +83,8 @@
           nix-core,
           nix-legacy,
           nodejs24-npm,
-          hugo
+          hugo,
+          tlp
 
     - name: Remove some packages
       dnf:
