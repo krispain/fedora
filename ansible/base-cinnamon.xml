@@ -71,6 +71,7 @@
           default-fonts-core,
           fzf,
           bat,
+          telnet,
           fd-find,
           vim-X11,
           vim-syntastic-ansible.noarch,
