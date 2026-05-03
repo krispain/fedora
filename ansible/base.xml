@@ -60,7 +60,6 @@
           nextcloud-client-nautilus,
           iwlwifi-mvm-firmware,
           iwlwifi-dvm-firmware,
-          icedtea-web,
           default-fonts,
           default-fonts-core,
           fzf,
