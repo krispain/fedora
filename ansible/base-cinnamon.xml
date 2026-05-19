@@ -66,11 +66,11 @@
           nextcloud-client-nautilus,
           iwlwifi-mvm-firmware,
           iwlwifi-dvm-firmware,
-          icedtea-web,
           default-fonts,
           default-fonts-core,
           fzf,
           bat,
+          telnet,
           fd-find,
           vim-X11,
           vim-syntastic-ansible.noarch,
@@ -83,8 +83,7 @@
           nix-core,
           nix-legacy,
           nodejs24-npm,
-          hugo,
-          tlp
+          hugo
 
     - name: Remove some packages
       dnf:
