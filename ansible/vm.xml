@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+
+  tasks:
+    - name: Install some packages
+      dnf:
+        name: |
+          spice-vdagent
+
