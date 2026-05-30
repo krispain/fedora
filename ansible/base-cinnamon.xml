@@ -45,6 +45,7 @@
           audacity,
           sox,
           vlc,
+          celluloid,
           mplayer,
           yt-dlp,
           id3v2,
