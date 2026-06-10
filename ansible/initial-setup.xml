@@ -98,6 +98,15 @@
         state: mounted
         fstype: nfs
 
+    - name: Mount second home NFS volumes with noauto according to boot option
+      ansible.posix.mount:
+        src: 172.16.1.250:/mnt/array1/storage-3
+        path: /mnt/storage-3
+        opts: x-systemd.automount,x-systemd.idle-timeout=600
+        boot: false
+        state: mounted
+        fstype: nfs
+
     - name: Install flatpak
       dnf:
         name: flatpak-builder
