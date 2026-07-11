@@ -84,7 +84,8 @@
           nix-core,
           nix-legacy,
           nodejs24-npm,
-          hugo
+          hugo,
+          jdupes
 
     - name: Remove some packages
       dnf:
