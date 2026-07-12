@@ -110,6 +110,12 @@
           - org.signal.Signal
           - org.telegram.desktop
 
+    - name: Install ubports-installer appimage
+      ansible.builtin.get_url:
+        url: https://devices.ubuntu-touch.io/installer/?package=appimage
+        dest: /usr/local/bin/ubports-installer
+        mode: '0755'
+
     - name: Install linphone appimage
       ansible.builtin.get_url:
         url: https://linphone.org/releases/linux/latest_app

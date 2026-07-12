@@ -34,6 +34,12 @@
       when: result is changed
       debug: msg="{{ result.stdout_lines }}"
 
+    - name: Install ubports-installer appimage
+      ansible.builtin.get_url:
+        url: https://devices.ubuntu-touch.io/installer/?package=appimage
+        dest: /usr/local/bin/ubports-installer
+        mode: '0755'
+
     - name: Update linphone appimage
       ansible.builtin.get_url:
         url: https://linphone.org/releases/linux/latest_app
