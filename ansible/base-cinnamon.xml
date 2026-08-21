@@ -106,7 +106,6 @@
       community.general.flatpak:
         name:
           - com.slack.Slack
-          - com.bitwarden.desktop
           - org.signal.Signal
           - org.telegram.desktop
 
