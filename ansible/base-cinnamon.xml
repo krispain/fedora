@@ -85,8 +85,7 @@
           nix-legacy,
           nodejs24-npm,
           hugo,
-          jdupes,
-          rpm-ostree
+          jdupes
 
     - name: Remove some packages
       dnf:
