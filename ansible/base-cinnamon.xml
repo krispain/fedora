@@ -85,7 +85,8 @@
           nix-legacy,
           nodejs24-npm,
           hugo,
-          jdupes
+          jdupes,
+          deno-bin
 
     - name: Remove some packages
       dnf:
