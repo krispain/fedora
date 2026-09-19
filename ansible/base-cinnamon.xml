@@ -86,7 +86,8 @@
           nodejs24-npm,
           hugo,
           jdupes,
-          deno-bin
+          deno-bin,
+          shotcut
 
     - name: Remove some packages
       dnf:
